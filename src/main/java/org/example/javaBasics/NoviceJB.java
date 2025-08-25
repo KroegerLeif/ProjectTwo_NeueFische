@@ -60,7 +60,7 @@ public class NoviceJB
         System.out.println("Hallo " + name + "!");
     }
 
-    private static boolean validateUserInput(String input)
+    public static boolean validateUserInput(String input)
     {
         if(input == null || input.isEmpty() || input.isBlank())
         {
