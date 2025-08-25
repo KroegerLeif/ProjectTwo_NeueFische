@@ -21,6 +21,10 @@ public class ExpertJB
         }
 
         //Aufgabe 3
+        String[] seperatedString = seperateString("Hallo,m wie, war das noch mal, heute");
+        for (String s : seperatedString){
+            System.out.println(s);
+        }
 
         //Aufgabe 4
         System.out.println(calculateQuersumme(123456789));
@@ -72,4 +76,7 @@ public class ExpertJB
         }
     }
 
+    public static String[] seperateString(String input){
+        return input.split(",");
+    }
 }
