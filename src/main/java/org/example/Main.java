@@ -13,4 +13,20 @@ public class Main {
     public static int multiply(int a, int b){
         return a * b;
     }
+
+    public static String getFirstLetter(String text){
+        if(text != null && text.length() > 0){
+            return text.substring(0,1);
+        }else{
+            return null;
+        }
+    }
+
+    public static int divide(int a, int b){
+        if(b == 0){
+            throw new IllegalArgumentException("Dividing by zero is not allowed");
+        }else{
+            return a / b;
+        }
+    }
 }
