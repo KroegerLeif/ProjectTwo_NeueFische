@@ -1,6 +1,7 @@
 import org.example.TDDTask;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TDDTaksTest {
@@ -80,5 +81,50 @@ public class TDDTaksTest {
         int actual = TDDTask.countVowels(text);
         //Then
         assertEquals(expected,actual);
+    }
+
+    @Test
+    void factorial_returnFraction_givenNumber(){
+        //Given
+        int number = 5;
+        int expected = 120;
+        //When
+        int actual = TDDTask.factorial(number);
+        //Then
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void factorial_returnOne_givenZero(){
+        //Given
+        int number = 0;
+        int expected = 1;
+        //When
+        int actual = TDDTask.factorial(number);
+        //Then
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void fibonacci_returnFibonaci_fabonaciValue(){
+        //Given
+        int number = 6;
+        int expected = 8;
+        //When
+        int actual = TDDTask.fibonacci(number);
+        //Then
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void mergeArrays_returnMergedArray_giveTwoArrays(){
+        //Given
+        int[] array1 = {1,2,3};
+        int[] array2 = {4,5,6};
+        int[] expected = {1,2,3,4,5,6};
+        //When
+        int[] actual = TDDTask.mergeArrays(array1,array2);
+        //Then
+        assertArrayEquals(expected,actual);
     }
 }
