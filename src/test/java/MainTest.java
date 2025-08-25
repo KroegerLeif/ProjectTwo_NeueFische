@@ -96,4 +96,38 @@ public class MainTest {
         assertThrows(IllegalArgumentException.class, () -> Main.divide(a,b));
     }
 
+    @Test
+    void isPrime_true_withPrimeNumber(){
+        //Given
+        int number = 3;
+        int number1 = 7;
+        int number2 = 11;
+        boolean expected = true;
+        //When
+        boolean actual = Main.isPrime(number);
+        boolean actual1 = Main.isPrime(number1);
+        boolean actual2 = Main.isPrime(number2);
+        //Then
+        assertEquals(expected,actual);
+        assertEquals(expected,actual1);
+        assertEquals(expected,actual2);
+    }
+
+    @Test
+    void isPrime_false_withPrimeNumber(){
+        //Given
+        int number = 9;
+        int number1 = 10;
+        int number2 = 14;
+        boolean expected = false;
+        //When
+        boolean actual = Main.isPrime(number);
+        boolean actual1 = Main.isPrime(number1);
+        boolean actual2 = Main.isPrime(number2);
+        //Then
+        assertEquals(expected,actual);
+        assertEquals(expected,actual1);
+        assertEquals(expected,actual2);
+    }
+
 }
